@@ -1,20 +1,19 @@
 //your JS code here. If required.
 let output = document.getElementById("output");
-console.log(output);
-let text = document.getElementById("text").value;
-console.log(text);
-let delay = document.getElementById("delay").value;
-console.log(delay)
+// console.log(output);
+let text = document.getElementById("text");
+// console.log(text.value);
+let delay = document.getElementById("delay");
+// console.log(delay.value)
 
 document.getElementById("btn").addEventListener("click", async ()=>{
 	let p = new Promise((resolve,reject)=>{
 		setTimeout(()=>{
 			resolve();
-		},delay)
+		},delay.value)
 	}) 
 
 	let res = await p;
-	output.innerText = text;
-	console.log("innerText", output.innerText)
+	output.innerText = text.value;
 	
 })
